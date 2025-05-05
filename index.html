@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/slider.js"></script>
+    <title>Agility Brands</title>
+</head>
+
+<body class="bg-white">
+    <header class="relative h-screen w-full flex flex-col justify-center items-center text-white overflow-hidden">
+        <img src="src/img/hero.png" alt="Vista aérea ciudad" class="absolute inset-0 w-full h-full object-cover z-0">
+        <div class="absolute inset-0 w-full h-full bg-black bg-opacity-30 z-0"></div>
+        <div class="relative z-10 w-full h-full flex flex-col">
+            <div class="flex justify-between items-center w-full px-8 pt-6 max-w-6xl mx-auto">
+                <img src="src/img/common/logo.svg" alt="Agility Brands" class="h-8">
+                <a href="#contacto"
+                    class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded transition font-semibold shadow">Contactar
+                    →</a>
+            </div>
+            <div class="flex flex-col items-center justify-center flex-1">
+                <h1 class="text-4xl md:text-5xl font-bold text-center leading-tight mb-4 hero-title">
+                    Transformamos <span class="text-pink-400">marcas</span> en<br>
+                    experiencias con propósito
+                </h1>
+                <p class="mt-2 text-center max-w-2xl text-lg font-light mb-8 hero-description">
+                    Convierte tu identidad en un activo diferenciador con estrategias creativas e innovadoras que
+                    potencian la conexión, fidelización y crecimiento de tu marca.
+                </p>
+                <a href="#servicios"
+                    class="border-2 border-pink-400 text-white px-8 py-2 rounded font-semibold hover:bg-pink-500 hover:border-pink-500 transition flex items-center gap-2">
+                    Servicios <span aria-hidden="true">→</span>
+                </a>
+                <!-- Slider indicators -->
+                <div class="flex justify-center mt-10">
+                    <span
+                        class="w-3 h-3 bg-pink-400 rounded-full mx-1 inline-block slider-indicator cursor-pointer"></span>
+                    <span
+                        class="w-3 h-3 bg-white bg-opacity-60 rounded-full mx-1 inline-block slider-indicator cursor-pointer"></span>
+                    <span
+                        class="w-3 h-3 bg-white bg-opacity-60 rounded-full mx-1 inline-block slider-indicator cursor-pointer"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-gray-50 py-24 md:py-36">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex-1 flex flex-col justify-center items-start md:items-start">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">Agility <span class="text-pink-400">Brands</span></h2>
+                <p class="text-lg text-gray-700 max-w-lg mb-1">Somos una consultora boutique que impulsa y acompaña a
+                    nuestros socios de <span class="text-pink-400">forma personalizada</span> en su transformación de
+                    valor.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1 w-full max-w-xl">
+                <div class="bg-white rounded-lg shadow-md p-8 flex flex-col items-start">
+                    <span class="text-4xl font-extrabold text-pink-400 mb-2">1.</span>
+                    <span class="font-semibold text-gray-800">Creamos</span>
+                    <span class="text-pink-400 font-semibold">experiencias</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-8 flex flex-col items-start">
+                    <span class="text-4xl font-extrabold text-pink-400 mb-2">2.</span>
+                    <span class="font-semibold text-gray-800">Innovación</span>
+                    <span class="text-pink-400 font-semibold">y agilidad</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-8 flex flex-col items-start">
+                    <span class="text-4xl font-extrabold text-pink-400 mb-2">3.</span>
+                    <span class="font-semibold text-gray-800">Generamos</span>
+                    <span class="text-pink-400 font-semibold">valor</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-8 flex flex-col items-start">
+                    <span class="text-4xl font-extrabold text-pink-400 mb-2">4.</span>
+                    <span class="font-semibold text-gray-800">Somos tu</span>
+                    <span class="text-pink-400 font-semibold">socio facilitador</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 mb-24">
+            <h2 class="text-4xl font-bold text-center">Nuestros <span class="text-pink-400">servicios</span></h2>
+        </div>
+        <div class="relative flex flex-col items-center">
+            <div class="absolute left-1/2 -translate-x-1/2 -top-20 w-[90vw] h-72 z-0">
+                <img src="src/img/home/servicios.svg" alt="Servicios"
+                    class="w-full h-full object-cover rounded-3xl shadow-lg">
+            </div>
+            <div
+                class="relative z-10 max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-16 lg:gap-y-0 px-2 pt-24">
+                <div
+                    class="bg-white rounded-2xl shadow-lg flex-1 max-w-sm mx-auto flex flex-col items-center pt-16 pb-8 px-6 min-h-[420px] relative">
+                    <div class="absolute -top-8 left-1/2 -translate-x-1/2">
+                        <img src="src/img/icon-brand360.png" alt="Brand 360"
+                            class="w-24 h-24 rounded-xl shadow-md bg-white p-2 border-2 border-gray-100">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mt-6 mb-2">Consultoría<br>Brand 360°</h3>
+                    <p class="text-gray-700 text-center mb-6">Creamos estrategias de marca que garantizan coherencia
+                        y diferenciación. Combinamos experiencia del cliente y comunicación efectiva para fortalecer
+                        tu identidad y maximizar el impacto de tu negocio.</p>
+                    <a href="pages/services/brand360.html"
+                        class="font-semibold underline underline-offset-4 decoration-dotted hover:text-pink-400">Más
+                        información</a>
+                </div>
+                <div
+                    class="bg-white rounded-2xl shadow-lg flex-1 max-w-sm mx-auto flex flex-col items-center pt-16 pb-8 px-6 min-h-[420px] relative">
+                    <div class="absolute -top-8 left-1/2 -translate-x-1/2">
+                        <div class="w-24 h-24 rounded-xl shadow-md bg-gray-200"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mt-6 mb-2">Transformación ágil<br>en equipos</h3>
+                    <p class="text-gray-700 text-center mb-6">Impulsa la transformación con un liderazgo consciente
+                        y con propósito. Fortalecemos equipos motivados, creativos y resilientes para construir
+                        culturas innovadoras y sostenibles.</p>
+                    <a href="pages/services/transformacion.html"
+                        class="font-semibold underline underline-offset-4 decoration-dotted hover:text-pink-400">Más
+                        información</a>
+                </div>
+                <div
+                    class="bg-white rounded-2xl shadow-lg flex-1 max-w-sm mx-auto flex flex-col items-center pt-16 pb-8 px-6 min-h-[420px] relative">
+                    <div class="absolute -top-8 left-1/2 -translate-x-1/2">
+                        <div class="w-24 h-24 rounded-xl shadow-md bg-gray-200"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mt-6 mb-2">Personal<br>Branding</h3>
+                    <p class="text-gray-700 text-center mb-6">Potencia tu marca personal y deja una huella única. Te
+                        ayudamos a construir una identidad auténtica, estratégica y alineada con tus valores, para
+                        que te posiciones con fuerza en el mercado, fortalezcas tu reputación y generes nuevas
+                        oportunidades.</p>
+                    <a href="pages/services/personal-branding.html"
+                        class="font-semibold underline underline-offset-4 decoration-dotted hover:text-pink-400">Más
+                        información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="flex-1 flex flex-col justify-center items-start md:items-start">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Quiénes <span class="text-pink-400">somos</span></h2>
+                <p class="text-md text-gray-700 max-w-xl mb-6">Somos un equipo facilitador apasionado por el deseo de
+                    potenciar el valor intangible de las marcas, equipos y personas, impulsados por nuestra esencia
+                    colaborativa en la búsqueda del propósito y la creación de propuestas de valor únicas que generan un
+                    diferencial competitivo en el entorno.</p>
+                <a href="#"
+                    class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold shadow transition flex items-center gap-2">Conocer
+                    todo el equipo <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="flex-1 flex flex-row gap-8 justify-center items-stretch w-full">
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden w-60 relative">
+                    <img src="src/img/home/carlos.svg" alt="Carlos Albagnac" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <div class="text-xl font-semibold">Carlos Albagnac</div>
+                        <div class="text-lg opacity-90">[Cargo]</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden w-60 relative">
+                    <img src="src/img/home/constanza.svg" alt="Constanza Araya" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <div class="text-xl font-semibold">Constanza Araya</div>
+                        <div class="text-lg opacity-90">[Cargo]</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="flex-shrink-0">
+                <img src="src/img/home/convenios.svg" alt="Convenios"
+                    class="w-96 h-96 object-cover rounded-2xl shadow-md">
+            </div>
+            <div class="flex-1 flex flex-col justify-center items-start md:pl-8 mt-8 md:mt-0">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Convenios con <span
+                        class="text-pink-400">sentido</span></h2>
+                <p class="text-md text-gray-700 mb-6 max-w-2xl">Creemos que el verdadero crecimiento no es solo digital:
+                    es humano, inclusivo y con impacto. Por eso, queremos poner nuestra experiencia y herramientas al
+                    servicio de organizaciones y quienes lo necesiten.</p>
+                <a href="pages/convenios/index.html"
+                    class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold shadow transition flex items-center gap-2">Conoce
+                    más detalles <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="pt-16 md:pt-32 pb-16 md:pb-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="flex-1 flex flex-col justify-center items-start md:items-start">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-2">Hagamos que tu marca <span
+                        class="text-[#e94b85]">trascienda</span></h2>
+                <p class="text-md text-gray-700 max-w-xl mb-6">Las marcas más poderosas no solo existen, inspiran.
+                    Cuéntanos tus desafíos, conectemos, diseñemos y transformemos juntos tu marca.</p>
+            </div>
+            <div class="flex-1 flex justify-center items-center w-full">
+                <form class="bg-white rounded-2xl shadow-md p-10 w-full max-w-md flex flex-col gap-3">
+                    <h3 class="text-2xl font-semibold text-center mb-2">Formulario de contacto</h3>
+                    <label class="text-gray-700">Nombre:</label>
+                    <input type="text" class="border rounded px-4 py-2" required>
+                    <label class="text-gray-700">Correo electrónico:</label>
+                    <input type="email" class="border rounded px-4 py-2" required>
+                    <label class="text-gray-700">Servicio:</label>
+                    <select class="border rounded px-4 py-2" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option>Consultoría Brand 360°</option>
+                        <option>Transformación ágil en equipos</option>
+                        <option>Personal Branding</option>
+                    </select>
+                    <label class="text-gray-700">Mensaje:</label>
+                    <textarea class="border rounded px-4 py-2" rows="3" required></textarea>
+                    <button type="submit"
+                        class="bg-[#e94b85] hover:bg-[#e94b85] text-white px-6 py-2 rounded-lg font-semibold shadow transition mt-2">Enviar
+                        formulario <span aria-hidden="true">→</span></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#e94b85] pt-16 pb-6 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div class="min-w-[250px] max-w-[400px] text-left">
+                    <img src="src/img/common/logo-white.svg" alt="Agility Brands" class="h-8 mb-4">
+                    <p class="text-sm">
+                        Somos una consultora boutique que impulsa y acompaña a nuestros socios de
+                        <span class="font-bold">forma personalizada</span> en su transformación de valor.
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-12 md:gap-24">
+                    <div class="min-w-[200px]">
+                        <h4 class="font-semibold text-lg mb-3">Servicios</h4>
+                        <ul class="space-y-1 text-sm">
+                            <li>Construcción valor de marca</li>
+                            <li><a href="pages/servicios/transformacion.html" class="hover:text-white/80">Transformación
+                                    ágil en equipos</a></li>
+                            <li><a href="pages/servicios/personal-branding.html" class="hover:text-white/80">Branding
+                                    estratégico</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="min-w-[180px]">
+                        <h4 class="font-semibold text-lg mb-3">Redes sociales</h4>
+                        <div class="flex gap-4 mt-2">
+                            <a href="#" class="hover:text-white/80" aria-label="Facebook">
+                                <img src="src/img/common/facebook.svg" alt="Facebook" class="w-6 h-6">
+                            </a>
+                            <a href="#" class="hover:text-white/80" aria-label="LinkedIn">
+                                <img src="src/img/common/linkedin.svg" alt="LinkedIn" class="w-7 h-7">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-white/20 my-10 w-full">
+            <div class="text-center text-md">Agility Brands | 2025 | Santiago, Chile</div>
+        </div>
+    </footer>
+</body>
+
+</html>
