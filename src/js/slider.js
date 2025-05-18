@@ -41,9 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
             bgImgEl.src = slide.image;
 
             indicators.forEach((el, i) => {
-                el.classList.toggle('bg-[#e94b85]', i === index);
-                el.classList.toggle('bg-white', i !== index);
-                el.classList.toggle('bg-opacity-60', i !== index);
+                el.setAttribute('aria-selected', i === index);
+                if (i === index) {
+                    el.classList.remove('bg-white', 'bg-opacity-60');
+                    el.classList.add('bg-[#e94b85]');
+                } else {
+                    el.classList.remove('bg-[#e94b85]');
+                    el.classList.add('bg-white', 'bg-opacity-60');
+                }
             });
 
             if (animate) {
