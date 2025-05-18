@@ -16,11 +16,11 @@
 <body class="bg-white font-[Montserrat]">
     <nav class="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
         <div class="flex justify-between items-center py-4 w-full lg:max-w-6xl mx-auto px-6">
-            <a href="../index.html">
-                <img src="../src/img/common/logo-black.svg" alt="Agility Brands" class="h-8">
+            <a href="inicio.html">
+                <img src="src/img/common/logo-black.svg" alt="Agility Brands" class="h-8">
             </a>
             <div class="flex items-center gap-8">
-                <a href="../index.html" class="hidden md:block text-[16px]">Inicio</a>
+                <a href="inicio.html" class="hidden md:block text-[16px]">Inicio</a>
                 <a href="#contacto"
                     class="bg-[#e84b84] hover:bg-[#e84b84] text-white px-4 py-2 md:px-[16px] md:py-[10px] rounded-lg font-semibold shadow transition flex items-center gap-2 text-[16px]">
                     Contactar <span aria-hidden="true">→</span>
@@ -30,7 +30,7 @@
     </nav>
 
     <div class="w-full h-[180px] md:h-[180px] relative mt-16">
-        <img src="../src/img/servicios/personal-branding/banner.svg" alt="Banner Agility Brands"
+        <img src="src/img/servicios/personal-branding/banner.svg" alt="Banner Agility Brands"
             class="w-full h-full object-cover">
         <div class="absolute inset-0">
             <div class="text-white w-full lg:max-w-6xl mx-auto px-6 py-4 h-full flex items-center">
@@ -39,9 +39,10 @@
         </div>
     </div>
 
-    <section class="w-full lg:max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-start md:items-center py-16 md:py-24 lg:py-32 gap-4">
+    <section
+        class="w-full lg:max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-start md:items-center py-16 md:py-24 lg:py-32 gap-4">
         <div class="w-fullmd:w-1/3 flex justify-start">
-            <img src="../src/img/servicios/personal-branding/hero.svg" alt="Marca personal"
+            <img src="src/img/servicios/personal-branding/hero.svg" alt="Marca personal"
                 class="rounded-[16px] w-full md:w-[327px] md:h-[367px] object-cover shadow-lg">
         </div>
         <div class="w-full md:w-2/3">
@@ -78,7 +79,7 @@
     <section
         class="w-full lg:max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-start md:items-center justify-between gap-12 py-16 md:py-24 lg:py-32">
         <div class="flex-1 flex justify-start">
-            <img src="../src/img/servicios/personal-branding/objetivos.svg" alt="Objetivos personal branding"
+            <img src="src/img/servicios/personal-branding/objetivos.svg" alt="Objetivos personal branding"
                 class="w-96 max-w-full">
         </div>
         <div class="flex-1">
@@ -117,7 +118,7 @@
                 </a>
             </div>
             <div class="flex-1 flex justify-end">
-                <img src="../src/img/servicios/personal-branding/rrss.svg" alt="Marca personal en redes sociales"
+                <img src="src/img/servicios/personal-branding/rrss.svg" alt="Marca personal en redes sociales"
                     class="rounded-[25px] w-[447px] h-[431px] object-cover shadow-lg">
             </div>
         </section>
@@ -126,7 +127,7 @@
     <section class="py-16 md:py-24 lg:py-32 bg-white">
         <div class="max-w-2xl mx-auto px-6 text-start">
             <blockquote class="italic text-xl text-gray-800 relative">
-                <img src="../src/img/common/quote.svg" alt="Quote"
+                <img src="src/img/common/quote.svg" alt="Quote"
                     class="w-6 md:w-12 h-6 md:h-12 absolute -left-4 -top-4 select-none">
                 Cada persona es única, construye tu marca con propósito y cuenta tu historia. Diférenciate y deja
                 huella.
@@ -146,27 +147,35 @@
                 </p>
             </div>
             <div class="flex-1 flex justify-center items-center lg:justify-end w-full">
-                <form class="bg-white rounded-[16px] shadow-md p-10 w-full max-w-md flex flex-col gap-3" action="#"
-                    method="POST" aria-labelledby="contact-form-title">
-                    <h3 id="contact-form-title" class="text-2xl font-semibold text-center mb-2">Formulario de
-                        contacto
+                <form class="bg-white rounded-[16px] shadow-md p-10 w-full max-w-md flex flex-col gap-3"
+                    action="/sendEmail.php" method="POST" aria-labelledby="contact-form-title">
+
+                    <h3 id="contact-form-title" class="text-2xl font-semibold text-center mb-2">Formulario de contacto
                     </h3>
+
                     <label class="text-gray-700">Nombre:</label>
-                    <input type="text" class="border rounded px-4 py-2" required>
+                    <input type="text" name="nombre" class="border rounded px-4 py-2" required>
+
                     <label class="text-gray-700">Correo electrónico:</label>
-                    <input type="email" class="border rounded px-4 py-2" required>
+                    <input type="email" name="email" class="border rounded px-4 py-2" required>
+
                     <label class="text-gray-700">Servicio:</label>
-                    <select class="border rounded px-4 py-2" required>
+                    <select name="servicio" class="border rounded px-4 py-2" required>
                         <option value="">Selecciona un servicio</option>
                         <option>Consultoría Brand 360°</option>
                         <option>Transformación ágil en equipos</option>
                         <option>Personal Branding</option>
                     </select>
+
                     <label class="text-gray-700">Mensaje:</label>
-                    <textarea class="border rounded px-4 py-2" rows="3" required></textarea>
+                    <textarea name="mensaje" class="border rounded px-4 py-2" rows="3" required></textarea>
+
                     <button type="submit"
-                        class="bg-[#e84b84] hover:bg-[#e84b84] text-white px-4 py-2 md:px-[16px] md:py-[10px] rounded-lg font-semibold shadow transition flex justify-center items-center gap-2">Enviar
-                        formulario <span aria-hidden="true">→</span></button>
+                        class="bg-[#e84b84] hover:bg-[#e84b84] text-white px-4 py-2 md:px-[16px] md:py-[10px] rounded-lg font-semibold shadow transition flex justify-center items-center gap-2">
+                        Enviar formulario <span aria-hidden="true">→</span>
+                    </button>
+
+                    <div id="form-status" class="text-center text-sm mt-2"></div>
                 </form>
             </div>
         </div>
@@ -176,7 +185,7 @@
         <div class="w-full lg:max-w-6xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-start gap-12">
                 <div class="min-w-[250px] max-w-[400px] text-left">
-                    <img src="../src/img/common/logo-white.svg" alt="Agility Brands" class="h-8 mb-4">
+                    <img src="src/img/common/logo-white.svg" alt="Agility Brands" class="h-8 mb-4">
                     <p class="text-sm">
                         Somos una consultora boutique que impulsa y acompaña a nuestros socios de
                         <span class="font-bold">forma personalizada</span> en su transformación de valor.
@@ -210,6 +219,35 @@
             <div class="text-center text-sm">Agility Brands | 2025 | Santiago, Chile</div>
         </div>
     </footer>
+    <script>
+        document.querySelector("form").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const data = new FormData(form);
+            const statusEl = document.getElementById("form-status");
+
+            statusEl.textContent = "Enviando...";
+            statusEl.style.color = "gray";
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: data
+                });
+
+                const result = await response.json();
+
+                statusEl.textContent = result.message;
+                statusEl.style.color = result.success ? "green" : "red";
+
+                if (result.success) form.reset();
+            } catch (error) {
+                statusEl.textContent = "Hubo un error al enviar el formulario.";
+                statusEl.style.color = "red";
+            }
+        });
+    </script>
 </body>
 
 </html>

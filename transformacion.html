@@ -9,18 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/style.css">
     <title>Transformación Digital | Agility Brands</title>
 </head>
 
 <body class="bg-white font-[Montserrat]">
     <nav class="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
         <div class="flex justify-between items-center py-4 w-full lg:max-w-6xl mx-auto px-6">
-            <a href="../index.html">
-                <img src="../src/img/common/logo-black.svg" alt="Agility Brands" class="h-8">
+            <a href="inicio.html">
+                <img src="src/img/common/logo-black.svg" alt="Agility Brands" class="h-8">
             </a>
             <div class="flex items-center gap-8">
-                <a href="../index.html" class="hidden md:block">Inicio</a>
+                <a href="inicio.html" class="hidden md:block">Inicio</a>
                 <a href="#contacto"
                     class="bg-[#e84b84] hover:bg-[#e84b84] text-white px-4 py-2 md:px-[16px] md:py-[10px] rounded-lg font-semibold shadow transition flex items-center gap-2">
                     Contactar <span aria-hidden="true">→</span>
@@ -30,7 +30,7 @@
     </nav>
 
     <div class="w-full h-[180px] md:h-[180px] relative mt-16">
-        <img src="../src/img/servicios/transformacion/banner.svg" alt="Banner Agility Brands"
+        <img src="src/img/servicios/transformacion/banner.svg" alt="Banner Agility Brands"
             class="w-full h-full object-cover">
         <div class="absolute inset-0">
             <div class="text-white max-w-6xl mx-auto px-6 py-4 h-full flex items-center">
@@ -44,7 +44,7 @@
             <div class="flex flex-col lg:flex-row gap-16 items-center">
                 <div class="flex-1">
                     <blockquote class="italic text-base md:text-xl text-gray-800 relative">
-                        <img src="../src/img/common/quote.svg" alt="Quote"
+                        <img src="src/img/common/quote.svg" alt="Quote"
                             class="w-6 md:w-12 h-6 md:h-12 absolute -left-4 -top-4 select-none">
                         Las organizaciones no cambian por sí solas, la verdadera transformación comienza con las
                         personas, solo se produce el cambio cuando ellas adoptan una nueva mentalidad
@@ -93,7 +93,7 @@
                         <div
                             class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-start md:items-center text-start md:text-center">
                             <div class="mb-4">
-                                <img src="../src/img/servicios/transformacion/programas-de-formacion.webp"
+                                <img src="src/img/servicios/transformacion/programas-de-formacion.webp"
                                     alt="Icono Programas de formación en liderazgo desde el propósito"
                                     class="w-20 h-20 object-contain">
                             </div>
@@ -103,7 +103,7 @@
                         <div
                             class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-start md:items-center text-start md:text-center">
                             <div class="mb-4">
-                                <img src="../src/img/servicios/transformacion/activacion-cultural.webp"
+                                <img src="src/img/servicios/transformacion/activacion-cultural.webp"
                                     alt="Icono Activación cultural desde el propósito" class="w-20 h-20 object-contain">
                             </div>
                             <h3 class="text-md font-medium">Activación cultural desde el propósito</h3>
@@ -111,7 +111,7 @@
                         <div
                             class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-start md:items-center text-start md:text-center">
                             <div class="mb-4">
-                                <img src="../src/img/servicios/transformacion/desarrollo-de-equipos.webp"
+                                <img src="src/img/servicios/transformacion/desarrollo-de-equipos.webp"
                                     alt="Icono Desarrollo de equipos" class="w-20 h-20 object-contain">
                             </div>
                             <h3 class="text-md font-medium">Desarrollo de equipos</h3>
@@ -119,7 +119,7 @@
                         <div
                             class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-start md:items-center text-start md:text-center">
                             <div class="mb-4">
-                                <img src="../src/img/servicios/transformacion/purpose-index.webp"
+                                <img src="src/img/servicios/transformacion/purpose-index.webp"
                                     alt="Icono Purpose Index" class="w-20 h-20 object-contain">
                             </div>
                             <h3 class="text-md font-medium">Purpose Index: Evaluación del índice de propósito</h3>
@@ -142,26 +142,35 @@
                 </p>
             </div>
             <div class="flex-1 flex justify-center items-center lg:justify-end w-full">
-                <form class="bg-white rounded-[16px] shadow-md p-10 w-full max-w-md flex flex-col gap-3" action="#"
-                    method="POST" aria-labelledby="contact-form-title">
+                <form class="bg-white rounded-[16px] shadow-md p-10 w-full max-w-md flex flex-col gap-3"
+                    action="/sendEmail.php" method="POST" aria-labelledby="contact-form-title">
+
                     <h3 id="contact-form-title" class="text-2xl font-semibold text-center mb-2">Formulario de contacto
                     </h3>
+
                     <label class="text-gray-700">Nombre:</label>
-                    <input type="text" class="border rounded px-4 py-2" required>
+                    <input type="text" name="nombre" class="border rounded px-4 py-2" required>
+
                     <label class="text-gray-700">Correo electrónico:</label>
-                    <input type="email" class="border rounded px-4 py-2" required>
+                    <input type="email" name="email" class="border rounded px-4 py-2" required>
+
                     <label class="text-gray-700">Servicio:</label>
-                    <select class="border rounded px-4 py-2" required>
+                    <select name="servicio" class="border rounded px-4 py-2" required>
                         <option value="">Selecciona un servicio</option>
                         <option>Consultoría Brand 360°</option>
                         <option>Transformación ágil en equipos</option>
                         <option>Personal Branding</option>
                     </select>
+
                     <label class="text-gray-700">Mensaje:</label>
-                    <textarea class="border rounded px-4 py-2" rows="3" required></textarea>
+                    <textarea name="mensaje" class="border rounded px-4 py-2" rows="3" required></textarea>
+
                     <button type="submit"
-                        class="bg-[#e84b84] hover:bg-[#e84b84] text-white px-6 py-3 rounded-lg font-semibold shadow transition flex justify-center items-center gap-2">Enviar
-                        formulario <span aria-hidden="true">→</span></button>
+                        class="bg-[#e84b84] hover:bg-[#e84b84] text-white px-4 py-2 md:px-[16px] md:py-[10px] rounded-lg font-semibold shadow transition flex justify-center items-center gap-2">
+                        Enviar formulario <span aria-hidden="true">→</span>
+                    </button>
+
+                    <div id="form-status" class="text-center text-sm mt-2"></div>
                 </form>
             </div>
         </div>
@@ -171,7 +180,7 @@
         <div class="w-full lg:max-w-6xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-start gap-12">
                 <div class="min-w-[250px] max-w-[400px] text-left">
-                    <img src="../src/img/common/logo-white.svg" alt="Agility Brands" class="h-8 mb-4">
+                    <img src="src/img/common/logo-white.svg" alt="Agility Brands" class="h-8 mb-4">
                     <p class="text-sm">
                         Somos una consultora boutique que impulsa y acompaña a nuestros socios de
                         <span class="font-bold">forma personalizada</span> en su transformación de valor.
@@ -195,7 +204,7 @@
                         <div class="flex gap-4 mt-2">
                             <a href="https://www.linkedin.com/company/agility-brands/" class="hover:text-white/80"
                                 aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                                <img src="../src/img/common/linkedin.svg" alt="LinkedIn" class="w-6 h-6">
+                                <img src="src/img/common/linkedin.svg" alt="LinkedIn" class="w-6 h-6">
                             </a>
                         </div>
                     </div>
@@ -205,6 +214,35 @@
             <div class="text-center text-sm">Agility Brands | 2025 | Santiago, Chile</div>
         </div>
     </footer>
+    <script>
+        document.querySelector("form").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const data = new FormData(form);
+            const statusEl = document.getElementById("form-status");
+
+            statusEl.textContent = "Enviando...";
+            statusEl.style.color = "gray";
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: data
+                });
+
+                const result = await response.json();
+
+                statusEl.textContent = result.message;
+                statusEl.style.color = result.success ? "green" : "red";
+
+                if (result.success) form.reset();
+            } catch (error) {
+                statusEl.textContent = "Hubo un error al enviar el formulario.";
+                statusEl.style.color = "red";
+            }
+        });
+    </script>
 </body>
 
 </html>

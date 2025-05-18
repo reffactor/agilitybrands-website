@@ -32,7 +32,7 @@
 
         <nav class="absolute top-0 left-0 right-0 z-20 flex justify-between items-center py-10 w-full lg:max-w-6xl mx-auto px-6"
             role="navigation">
-                <img src="src/img/common/logo.svg" alt="Agility Brands" class="h-6 md:h-9">
+            <img src="src/img/common/logo.svg" alt="Agility Brands" class="h-6 md:h-9">
             <a href="#contacto"
                 class="bg-[#e94b85] hover:bg-[#d13d75] text-white px-4 py-2 md:px-[16px] md:py-[10px] rounded-lg font-semibold shadow transition flex items-center gap-2">
                 Contactar <span aria-hidden="true">→</span>
@@ -138,7 +138,7 @@
                             negocio.
                         </p>
 
-                        <a href="servicios/brand360.html"
+                        <a href="brand360.html"
                             class="mt-6 inline-block text-sm font-semibold underline underline-offset-4 decoration-dotted hover:text-[#e94b85]">
                             Más información
                         </a>
@@ -160,7 +160,7 @@
                             motivados, creativos y resilientes para construir culturas innovadoras y sostenibles.
                         </p>
 
-                        <a href="servicios/transformacion.html"
+                        <a href="transformacion.html"
                             class="mt-6 inline-block text-sm font-semibold underline underline-offset-4 decoration-dotted hover:text-[#e94b85]">
                             Más información
                         </a>
@@ -183,7 +183,7 @@
                             mercado, fortalezcas tu reputación y generes nuevas oportunidades.
                         </p>
 
-                        <a href="servicios/personal-branding.html"
+                        <a href="personal-branding.html"
                             class="mt-6 inline-block text-sm font-semibold underline underline-offset-4 decoration-dotted hover:text-[#e94b85]">
                             Más información
                         </a>
@@ -294,26 +294,36 @@
                 </p>
             </div>
             <div class="flex-1 flex justify-center items-center lg:justify-end w-full">
-                <form class="bg-white rounded-[16px] shadow-md p-10 w-full max-w-md flex flex-col gap-3" action="#"
-                    method="POST" aria-labelledby="contact-form-title">
-                    <h3 id="contact-form-title" class="text-2xl font-semibold text-center mb-2">Formulario de contacto
-                    </h3>
+                <form class="bg-white rounded-[16px] shadow-md p-10 w-full max-w-md flex flex-col gap-3"
+                      action="/sendEmail.php"
+                      method="POST"
+                      aria-labelledby="contact-form-title">
+            
+                    <h3 id="contact-form-title" class="text-2xl font-semibold text-center mb-2">Formulario de contacto</h3>
+            
                     <label class="text-gray-700">Nombre:</label>
-                    <input type="text" class="border rounded px-4 py-2" required>
+                    <input type="text" name="nombre" class="border rounded px-4 py-2" required>
+            
                     <label class="text-gray-700">Correo electrónico:</label>
-                    <input type="email" class="border rounded px-4 py-2" required>
+                    <input type="email" name="email" class="border rounded px-4 py-2" required>
+            
                     <label class="text-gray-700">Servicio:</label>
-                    <select class="border rounded px-4 py-2" required>
+                    <select name="servicio" class="border rounded px-4 py-2" required>
                         <option value="">Selecciona un servicio</option>
                         <option>Consultoría Brand 360°</option>
                         <option>Transformación ágil en equipos</option>
                         <option>Personal Branding</option>
                     </select>
+            
                     <label class="text-gray-700">Mensaje:</label>
-                    <textarea class="border rounded px-4 py-2" rows="3" required></textarea>
+                    <textarea name="mensaje" class="border rounded px-4 py-2" rows="3" required></textarea>
+            
                     <button type="submit"
-                        class="bg-[#e84b84] hover:bg-[#e84b84] text-white px-4 py-2 md:px-[16px] md:py-[10px] rounded-lg font-semibold shadow transition flex justify-center items-center gap-2">Enviar
-                        formulario <span aria-hidden="true">→</span></button>
+                        class="bg-[#e84b84] hover:bg-[#e84b84] text-white px-4 py-2 md:px-[16px] md:py-[10px] rounded-lg font-semibold shadow transition flex justify-center items-center gap-2">
+                        Enviar formulario <span aria-hidden="true">→</span>
+                    </button>
+            
+                    <div id="form-status" class="text-center text-sm mt-2"></div>
                 </form>
             </div>
         </div>
@@ -333,11 +343,11 @@
                     <div class="min-w-[200px]">
                         <h4 class="font-semibold text-lg mb-3">Servicios</h4>
                         <ul class="space-y-1 text-sm">
-                            <li><a href="servicios/brand360.html" class="hover:text-white/80">Construcción valor
+                            <li><a href="brand360.html" class="hover:text-white/80">Construcción valor
                                     de marca</a></li>
-                            <li><a href="servicios/transformacion.html" class="hover:text-white/80">Transformación
+                            <li><a href="transformacion.html" class="hover:text-white/80">Transformación
                                     ágil en equipos</a></li>
-                            <li><a href="servicios/personal-branding.html" class="hover:text-white/80">Branding
+                            <li><a href="personal-branding.html" class="hover:text-white/80">Branding
                                     estratégico</a>
                             </li>
                         </ul>
@@ -359,32 +369,33 @@
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const carousel = document.getElementById("carousel");
-            const slides = carousel.children;
-            const dots = document.getElementById("dots").children;
-
-            let current = 0;
-
-            function updateCarousel(index) {
-                const slideWidth = slides[0].offsetWidth;
-                carousel.scrollTo({
-                    left: slideWidth * index,
-                    behavior: "smooth",
-                });
-
-                Array.from(dots).forEach((dot, i) => {
-                    dot.classList.toggle("bg-[#e94b85]", i === index);
-                    dot.classList.toggle("bg-gray-300", i !== index);
-                });
-            }
-
-            Array.from(dots).forEach((dot, i) =>
-                dot.addEventListener("click", () => {
-                    current = i;
-                    updateCarousel(i);
-                })
-            );
+        document.querySelector("form").addEventListener("submit", async function(e) {
+          e.preventDefault();
+        
+          const form = e.target;
+          const data = new FormData(form);
+          const statusEl = document.getElementById("form-status");
+        
+          statusEl.textContent = "Enviando...";
+          statusEl.style.color = "gray";
+        
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: data
+            });
+        
+            const result = await response.json();
+        
+            statusEl.textContent = result.message;
+            statusEl.style.color = result.success ? "green" : "red";
+        
+            if (result.success) form.reset();
+          } catch (error) {
+            statusEl.textContent = "Hubo un error al enviar el formulario.";
+            statusEl.style.color = "red";
+          }
+          
         });
     </script>
 </body>
