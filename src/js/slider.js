@@ -3,17 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Transformamos <span class="text-[#e94b85]">marcas</span> en<br>experiencias con propósito',
             description: 'Convierte tu identidad en un activo diferenciador con estrategias creativas e innovadoras que potencian la conexión,<br class="hidden md:block"> fidelización y crecimiento de tu marca.',
-            image: 'src/img/carrousel/1.png'
+            image: 'src/img/home/carrousel/1.png'
         },
         {
             title: '¿Cómo <span class="text-[#e94b85]">conectamos</span>?',
             description: 'Creando experiencias, innovando y generando valor',
-            image: 'src/img/carrousel/2.png'
+            image: 'src/img/home/carrousel/2.png'
         },
         {
             title: 'Consultoría <span class="text-[#e94b85]">Brand360</span>',
             description: 'Cuéntanos de tus desafíos, comencemos con la transformación y colaboración con auditoría de marca sin costo.',
-            image: 'src/img/carrousel/3.png'
+            image: 'src/img/home/carrousel/3.png'
         }
     ];
 

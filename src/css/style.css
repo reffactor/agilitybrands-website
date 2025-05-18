@@ -1,4 +1,3 @@
-
 :root {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -19,5 +18,54 @@
 @media (min-width: 1920px) {
     .header-container {
         height: 70vh;
+    }
+}
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+}
+
+.services-grid>div {
+    max-width: 350px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.services-grid>div h3 {
+    flex: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+@media (min-width: 640px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .services-grid {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
