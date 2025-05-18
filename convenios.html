@@ -22,7 +22,7 @@
             <div class="flex items-center gap-8">
                 <a href="../index.html" class="hidden md:block">Inicio</a>
                 <a href="#contacto"
-                    class="bg-[#e94b85] hover:bg-[#e94b85] text-white px-6 py-2 rounded transition font-semibold shadow">
+                    class="bg-[#e94b85] hover:bg-[#d13d75] text-white px-6 py-2 rounded transition font-semibold shadow">
                     Contactar →
                 </a>
             </div>
@@ -107,17 +107,22 @@
         </div>
     </section>
 
-    <section id="contacto" class="pt-16 md:pt-32 pb-16 md:pb-20 px-6 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
-            <div class="flex-1 flex flex-col justify-center items-start md:items-start">
-                <h2 class="text-3xl font-semibold text-gray-800 mb-2">Hagamos que tu marca <span
-                        class="text-[#e94b85]">trascienda</span></h2>
-                <p class="text-md text-gray-700 max-w-xl mb-6">Las marcas más poderosas no solo existen, inspiran.
-                    Cuéntanos tus desafíos, conectemos, diseñemos y transformemos juntos tu marca.</p>
+    <section id="contacto" class="pt-16 md:pt-32 pb-16 md:pb-20 bg-gray-50" aria-labelledby="contact-title">
+        <div class="w-full lg:max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div class="flex-1 flex flex-col justify-center items-start">
+                <h2 id="contact-title" class="text-3xl font-semibold text-gray-800 mb-2">
+                    Hagamos que tu marca <span class="text-[#e94b85]">trascienda</span>
+                </h2>
+                <p class="text-base text-gray-700 max-w-xl mb-6">
+                    Las marcas más poderosas no solo existen, inspiran. Cuéntanos tus desafíos, conectemos,
+                    diseñemos y transformemos juntos tu marca.
+                </p>
             </div>
-            <div class="flex-1 flex justify-center items-center w-full">
-                <form class="bg-white rounded-2xl shadow-md p-10 w-full max-w-md flex flex-col gap-3">
-                    <h3 class="text-2xl font-semibold text-center mb-2">Formulario de contacto</h3>
+            <div class="flex-1 flex justify-center items-center lg:justify-end w-full">
+                <form class="bg-white rounded-2xl shadow-md p-10 w-full max-w-md flex flex-col gap-3" action="#"
+                    method="POST" aria-labelledby="contact-form-title">
+                    <h3 id="contact-form-title" class="text-2xl font-semibold text-center mb-2">Formulario de contacto
+                    </h3>
                     <label class="text-gray-700">Nombre:</label>
                     <input type="text" class="border rounded px-4 py-2" required>
                     <label class="text-gray-700">Correo electrónico:</label>
@@ -132,15 +137,15 @@
                     <label class="text-gray-700">Mensaje:</label>
                     <textarea class="border rounded px-4 py-2" rows="3" required></textarea>
                     <button type="submit"
-                        class="bg-[#e94b85] hover:bg-[#e94b85] text-white px-6 py-2 rounded-lg font-semibold shadow transition mt-2">Enviar
+                        class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold shadow transition flex justify-center items-center gap-2">Enviar
                         formulario <span aria-hidden="true">→</span></button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="bg-[#e94b85] pt-16 pb-6 text-white">
-        <div class="max-w-6xl mx-auto px-6">
+    <footer class="bg-[#e94b85] pt-16 pb-6 text-white" role="contentinfo">
+        <div class="w-full lg:max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-start gap-12">
                 <div class="min-w-[250px] max-w-[400px] text-left">
                     <img src="src/img/common/logo-white.svg" alt="Agility Brands" class="h-8 mb-4">
@@ -153,10 +158,12 @@
                     <div class="min-w-[200px]">
                         <h4 class="font-semibold text-lg mb-3">Servicios</h4>
                         <ul class="space-y-1 text-sm">
-                            <li><a href="./servicios/brand360.html" class="hover:text-white/80">Construcción valor de marca</a></li>
-                            <li><a href="./servicios/transformacion.html" class="hover:text-white/80">Transformación ágil en
-                                    equipos</a></li>
-                            <li><a href="./servicios/personal-branding.html" class="hover:text-white/80">Branding estratégico</a>
+                            <li><a href="servicios/brand360.html" class="hover:text-white/80">Construcción valor
+                                    de marca</a></li>
+                            <li><a href="servicios/transformacion.html" class="hover:text-white/80">Transformación
+                                    ágil en equipos</a></li>
+                            <li><a href="servicios/personal-branding.html" class="hover:text-white/80">Branding
+                                    estratégico</a>
                             </li>
                         </ul>
                     </div>
@@ -171,7 +178,7 @@
                 </div>
             </div>
             <hr class="border-white/20 my-10 w-full">
-            <div class="text-center text-md">Agility Brands | 2025 | Santiago, Chile</div>
+            <div class="text-center text-sm">Agility Brands | 2025 | Santiago, Chile</div>
         </div>
     </footer>
 </body>
